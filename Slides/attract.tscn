@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bpmrq0j5gqe1a"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gn7hw"]
+
+[node name="Attract" type="Control" unique_id=1441050421]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gn7hw")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=279238857]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.2, 0.05490196, 1, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1775229422]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 199.0
+offset_right = 1899.0
+offset_bottom = 793.0
+theme_override_font_sizes/font_size = 100
+text = "Attract Mode"
+horizontal_alignment = 1
+vertical_alignment = 1
