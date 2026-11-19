@@ -1,12 +1,24 @@
 #config_version=6
+# ============================================================
+#  Attract Mode — Roger
+# ============================================================
+# Runs whenever there's no game in progress. No display is assumed here
+# (that's MPF-GMC's job, installed separately) — this drives GI and a
+# flasher instead so the machine still visibly "breathes" in attract on
+# hardware alone. Swap in a slide_player once GMC is installed.
+mode:
+  priority: 2
+  start_events: machine_reset_phase_3, game_ended
+  stop_events: game_starting
 
-# Attract mode that starts when the machine boots up, stops
-# whenever a game is started, and re-starts after the game ends.
+# The start button switch carries the built-in "start" tag, so MPF
+# already posts sw_start when it's hit — this line is what actually
+# kicks off a game.
+event_player:
+  sw_start: request_to_start_game
 
-slide_player:
-  mode_attract_started: attract
-sound_player:
-  mode_attract_started: 
-    opening_fanfare:
-      bus: music
-      
+# Example — uncomment once you've defined a GI light (or tag) in a
+# lights: section:
+# light_player:
+#   mode_attract_started:
+#     gi_lights: on

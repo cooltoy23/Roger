@@ -1,0 +1,26 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Flippers — pairs a flipper button switch with its main (kick) coil
+# and hold coil. This is real, active config (not commented out) —
+# but it references switches/coils in switches.yaml/coils.yaml that
+# ship commented by default, so it won't do anything until you
+# uncomment the matching s_*_flipper / c_*_flipper_* entries there.
+# disable_events also cuts power the instant service mode is entered —
+# a safety measure so nobody's hand is near a live coil while you're
+# working inside the machine.
+# ------------------------------------------------------------------
+flippers:
+  left_flipper:
+    main_coil: c_left_flipper_main
+    hold_coil: c_left_flipper_hold
+    activation_switch: s_left_flipper
+    disable_events: ball_will_end, service_mode_entered, tilt
+    eos_switch: s_left_flipper_eos
+    use_eos: true
+  right_flipper:
+    main_coil: c_right_flipper_main
+    hold_coil: c_right_flipper_hold
+    activation_switch: s_right_flipper
+    disable_events: ball_will_end, service_mode_entered, tilt
+    eos_switch: s_right_flipper_eos
+    use_eos: true

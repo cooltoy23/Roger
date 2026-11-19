@@ -1,0 +1,23 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Modes — which mode folders MPF loads at startup. Only attract and
+# base are on by default so this boots to something playable right
+# away. The others below ship in modes/ too — open the file, wire
+# whatever it references, then uncomment its line here to turn it on.
+# ------------------------------------------------------------------
+modes:
+  - attract
+  - base
+  # - bonus        # end-of-ball bonus scoring: modes/bonus/config/bonus.yaml
+  # - high_score    # tracks top scores as machine variables: modes/high_score/config/high_score.yaml
+  # - service        # MPF's own built-in service/diagnostics menu — wire the
+  #                    s_service_* switches first; its menu needs GMC to display.
+  # - tilt           # MPF's own built-in tilt handling (mpf.modes.tilt) — no
+  #                    custom mode file needed, just wire s_tilt (tag tilt_warning)
+  #                    and s_slam_tilt (tag slam_tilt) in an io_boards file, then
+  #                    uncomment. Without this enabled, tilt.yaml's warning/tilt
+  #                    counting still runs but nothing happens when it trips —
+  #                    flippers stay powered and the ball doesn't end.
+  # - match          # MPF's own built-in post-game match number (mpf.modes.match)
+  #                    — also fully built into MPF, no custom file needed. Just
+  #                    uncomment; it runs automatically after the last ball.

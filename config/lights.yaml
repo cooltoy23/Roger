@@ -1,0 +1,36 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Lights — general illumination and flashers. Neither FAST's 3208/
+# 1616/0804/cabinet I/O boards nor CobraPin's driver banks carry
+# dedicated LED/RGB outputs — GI and flashers on this hardware are
+# just plain coil-driver outputs (GI through a relay/SSR switching
+# power to incandescent or 12V GI strings, flashers as short coil
+# pulses), so they're defined as coils in your io_boards/ file, not
+# as `lights:` devices here. This file wires the GI relay on for the
+# whole game and off outside it, and shows how to pulse a flasher off
+# an event.
+# ------------------------------------------------------------------
+coil_player:
+  game_started:
+    c_gi_relay:
+      action: enable
+  game_ended:
+    c_gi_relay:
+      action: disable
+  # Example — pulse a flasher off any event you wire in your own
+  # modes (uncomment once c_flasher_1 is uncommented in an io_boards
+  # file):
+  # sw_left_sling_active:
+  #   c_flasher_1:
+  #     action: pulse
+
+# Your 20 requested addressable RGB lights (l_light_1..l_light_20) are defined in config/exp_boards/*.yaml,
+# not here — one `lights:` entry per physical LED, commented out just
+# like every switch/coil above until you uncomment what you actually
+# wired. Rename each l_light_N to the insert/feature it actually drives
+# once wired (e.g. l_left_ramp, l_jackpot) — see the machine README.
+# Use light_player (in a mode or show), not coil_player, to turn these
+# on or set colors, e.g.:
+# light_player:
+#   game_started:
+#     l_light_1: white

@@ -1,12 +1,19 @@
 #config_version=6
-
-## MPF Main Machine Config File
-#
-# This file defines your system-wide properties like switches,
-# drivers, ball devices, hardware platforms, and more. You can
-# include everything here, or create sub-config files to be
-# imported and merged with this one.
-
-modes:
-  - attract
-  - base
+# ------------------------------------------------------------------
+# Config — the file MPF loads first. It doesn't define anything on its
+# own: every real section of this machine lives in its own file below,
+# pulled in relative to this config/ folder, in the order listed.
+# ------------------------------------------------------------------
+config:
+  - hardware.yaml
+  - machine.yaml
+  - game.yaml
+  - settings.yaml
+  - flippers.yaml
+  - autofire_coils.yaml
+  - ball_devices.yaml
+  - playfields.yaml
+  - tilt.yaml
+  - lights.yaml
+  - credits.yaml
+  - modes.yaml

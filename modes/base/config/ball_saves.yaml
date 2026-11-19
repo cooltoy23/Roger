@@ -1,0 +1,18 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Ball saves — give the player a few seconds after the ball launches to
+# drain without losing the ball ("shoot again"). Starts its timer the
+# moment bd_plunger actually ejects a ball, not just when the ball
+# number changes, so it lines up with mechanical or auto plungers alike.
+# Lives here (inside base's own mode folder) rather than machine-wide
+# config, since it only ever matters during a ball base is already
+# running for.
+# ------------------------------------------------------------------
+ball_saves:
+  shoot_again:
+    active_time: 10s
+    hurry_up_time: 3s
+    timer_start_events: balldevice_bd_plunger_ejecting_ball
+    auto_launch: true
+    balls_to_save: 1
+    enable_events: ball_started

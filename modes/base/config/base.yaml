@@ -1,9 +1,21 @@
 #config_version=6
-
-# Base mode that starts at the beginning of each ball
-# and stops at the end of each ball.
-
+# ============================================================
+#  Base Mode — Roger
+# ============================================================
+# "base" is a convention, not an MPF built-in name: a low-priority mode
+# that's active for an entire ball, underneath whatever scoring/rule modes
+# you add later. Put always-on-during-play behavior here — general
+# illumination, basic switch sounds, standard scoring, etc.
 mode:
-  start_events: ball_starting
-  stop_events: ball_will_end
-  priority: 100
+  priority: 1
+  start_events: ball_started
+  stop_events: ball_ending
+
+config:
+  - ball_saves.yaml
+
+# Example — uncomment once you've defined a GI light (or tag) in a
+# lights: section:
+# light_player:
+#   ball_started:
+#     gi_lights: on

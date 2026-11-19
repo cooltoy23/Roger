@@ -1,0 +1,20 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Autofire coils — devices that fire themselves in direct response
+# to a switch, no rules code needed: slingshots and pop bumpers. Also
+# real, active config that references the (by-default commented-out)
+# switches/coils above — uncomment those first. disable_events also
+# cuts power the instant service mode is entered, same safety reason
+# as flippers.yaml.
+# ------------------------------------------------------------------
+autofire_coils:
+  left_slingshot:
+    coil: c_left_sling
+    switch: s_left_sling
+    enable_events: ball_started
+    disable_events: ball_ending, service_mode_entered, tilt
+  right_slingshot:
+    coil: c_right_sling
+    switch: s_right_sling
+    enable_events: ball_started
+    disable_events: ball_ending, service_mode_entered, tilt

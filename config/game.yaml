@@ -1,0 +1,11 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Game — the ball-by-ball rules of a standard game. balls_per_game is
+# how many balls each player gets; max_players caps how many can join
+# before MPF stops accepting new players. Both reference settings.yaml
+# instead of a hardcoded number, so an operator can change them from
+# MPF's own service menu without touching this file.
+# ------------------------------------------------------------------
+game:
+  balls_per_game: settings.balls_per_game
+  max_players: settings.max_players

@@ -1,0 +1,94 @@
+#config_version=6
+# ------------------------------------------------------------------
+# I/O board — FP-I/O-0024 — 24 switches / 8 drivers. Cabinet-mounted: flipper buttons, start, coin, service, slam tilt.
+# Every switch/coil wired to this specific board lives in this file —
+# one file per physical board, instead of one giant machine-wide
+# switches.yaml/coils.yaml — so working on this board's wiring means
+# opening just this file. Just like the machine-wide files this
+# replaces, EVERY entry below ships commented out — uncomment (delete
+# the leading "# ") each device you actually built here, and double
+# check the "number:" line matches the port you wired it to.
+# ------------------------------------------------------------------
+switches:
+  # ---- Standard pinball devices — uncomment the ones your machine actually has ----
+  # s_left_flipper:
+  #   number: cabinet-0
+  #   tags: left_flipper
+  # s_right_flipper:
+  #   number: cabinet-1
+  #   tags: right_flipper
+  # s_start:
+  #   number: cabinet-2
+  #   tags: start
+  # s_service_esc:
+  #   number: cabinet-3
+  #   tags: service_esc
+  # s_service_down:
+  #   number: cabinet-4
+  #   tags: service_down
+  # s_service_up:
+  #   number: cabinet-5
+  #   tags: service_up
+  # s_service_enter:
+  #   number: cabinet-6
+  #   tags: service_enter
+  # s_service_door:
+  #   number: cabinet-7
+  #   tags: service_door_open
+  # s_slam_tilt:
+  #   number: cabinet-8
+  #   tags: slam_tilt
+  # ---- Unused switches on cabinet (15 free) — uncomment & rename to use ----
+  # s_cabinet_09:
+  #   number: cabinet-9
+  # s_cabinet_10:
+  #   number: cabinet-10
+  # s_cabinet_11:
+  #   number: cabinet-11
+  # s_cabinet_12:
+  #   number: cabinet-12
+  # s_cabinet_13:
+  #   number: cabinet-13
+  # s_cabinet_14:
+  #   number: cabinet-14
+  # s_cabinet_15:
+  #   number: cabinet-15
+  # s_cabinet_16:
+  #   number: cabinet-16
+  # s_cabinet_17:
+  #   number: cabinet-17
+  # s_cabinet_18:
+  #   number: cabinet-18
+  # s_cabinet_19:
+  #   number: cabinet-19
+  # s_cabinet_20:
+  #   number: cabinet-20
+  # s_cabinet_21:
+  #   number: cabinet-21
+  # s_cabinet_22:
+  #   number: cabinet-22
+  # s_cabinet_23:
+  #   number: cabinet-23
+
+coils:
+  # ---- Standard pinball devices — uncomment the ones your machine actually has ----
+  # c_gi_relay:
+  #   number: cabinet-0
+  #   allow_enable: true
+  # c_flasher_1:
+  #   number: cabinet-1
+  #   default_pulse_ms: 30
+  # c_flasher_2:
+  #   number: cabinet-2
+  #   default_pulse_ms: 30
+  # ---- Unused coils on cabinet (5 free) — uncomment & rename to use ----
+  # c_cabinet_03:
+  #   number: cabinet-3
+  # c_cabinet_04:
+  #   number: cabinet-4
+  # c_cabinet_05:
+  #   number: cabinet-5
+  # c_cabinet_06:
+  #   number: cabinet-6
+  # c_cabinet_07:
+  #   number: cabinet-7

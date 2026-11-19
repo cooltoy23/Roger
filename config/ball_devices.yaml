@@ -1,0 +1,19 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Ball devices — places a ball can sit: the trough (holds drained
+# balls between balls/games) and the plunger/shooter lane. Real,
+# active config that references the switches/coils above — uncomment
+# those first.
+# ------------------------------------------------------------------
+ball_devices:
+  bd_trough:
+    tags: trough, home, drain
+    ball_switches: s_trough_1, s_trough_2, s_trough_3, s_trough_4, s_trough_5, s_trough_6
+    jam_switch: s_trough_jam
+    eject_coil: c_trough_eject
+    eject_targets: bd_plunger
+  bd_plunger:
+    tags: shooter, ball_add_live
+    ball_switches: s_shooter_lane
+    eject_coil: c_auto_plunger
+    eject_targets: playfield

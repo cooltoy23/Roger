@@ -1,0 +1,15 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Tilt — configures the tilt device itself: this is what counts warnings
+# and posts tilt_warning/tilt/slam_tilt events once you uncomment
+# s_tilt/s_slam_tilt in their board's io_boards/ file. It does NOT by
+# itself do anything about the game in progress — for tilting to actually
+# cut flipper power and end the ball, uncomment "- tilt" in modes.yaml too
+# (see that file for why). warnings_to_tilt reads from settings.yaml so
+# an operator can adjust tilt sensitivity from MPF's own service menu.
+# ------------------------------------------------------------------
+tilt:
+  warnings_to_tilt: settings.warnings_to_tilt
+  multiple_hit_window: 300ms
+  settle_time: 5s
+  reset_warnings_events: ball_will_end

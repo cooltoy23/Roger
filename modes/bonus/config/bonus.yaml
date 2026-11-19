@@ -1,0 +1,19 @@
+#config_version=6
+# ============================================================
+#  Bonus Mode — Roger
+# ============================================================
+# Tallies end-of-ball bonus. This ships with just a flat placeholder
+# award so the mode does something out of the box — replace `bonus_flat`
+# with your own tracked stats (ramps, loops, targets...) using
+# variable_player, same pattern, one entry per stat.
+mode:
+  start_events: ball_ending
+  stop_events: ball_started
+  priority: 5
+  game_mode: false
+
+variable_player:
+  ball_ending:
+    score:
+      int: 1000
+      action: add

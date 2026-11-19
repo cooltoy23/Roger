@@ -1,0 +1,8 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Credits — free play, so there's no coin/pricing logic to configure.
+# Flip the checkbox in the tool (or edit this file) if you want real
+# coin-door pricing instead.
+# ------------------------------------------------------------------
+credits:
+  free_play: true

@@ -1,0 +1,10 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Machine — basic facts MPF needs about the physical machine itself.
+# balls_installed should match how many pinballs actually live in your
+# trough/ball devices; min_balls is the fewest MPF will let a game
+# start with before it complains something's missing.
+# ------------------------------------------------------------------
+machine:
+  balls_installed: 6
+  min_balls: 6

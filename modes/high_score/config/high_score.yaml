@@ -1,0 +1,17 @@
+#config_version=6
+# ============================================================
+#  High Score Mode — Roger
+# ============================================================
+# Tracks the top scores as machine variables (e.g. score1_value,
+# score1_name) across games. Entering initials on a screen needs GMC's
+# on-screen keyboard widget — install GMC and see its high-score guide to
+# add that; scores are tracked here either way.
+mode:
+  start_events: game_ended
+  priority: 1
+
+high_score:
+  enter_initials_timeout: 60
+  award_slide_display_time: 4s
+  categories:
+    - score

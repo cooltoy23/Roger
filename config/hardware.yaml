@@ -1,0 +1,48 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Hardware — tells MPF this machine talks to FAST Pinball hardware over
+# the "Neuron" (current-generation) protocol, and lists every physical
+# I/O board so MPF knows which ports exist. The key under each board
+# below (e.g. "cabinet") is that board's label — it's both the
+# io_boards/<label>.yaml file this pulls in and what the "<label>-N"
+# address in that file's switches/coils refers back to. The separate
+# "exp: boards:" block below is the LED/servo expansion bus — a
+# different physical connection from the switch/coil io_loop above, but
+# addressed the same way (its board-label keys back exp_boards/<label>.
+# yaml's "<label>-port-position" light numbers). "neuron" is always
+# present — it's the Neuron controller's own built-in LED expansion, not
+# a separate board you buy.
+# ------------------------------------------------------------------
+hardware:
+  platform: fast
+
+config:
+  - io_boards/3208.yaml
+  - io_boards/cabinet.yaml
+  - exp_boards/neuron.yaml
+  - exp_boards/0071.yaml
+
+fast:
+  net:
+    port: auto
+    controller: neuron
+    io_loop:
+      3208:
+        model: FP-I/O-3208
+        order: 1
+      cabinet:
+        model: FP-I/O-0024
+        order: 2
+    baud: 921600
+    debug: false
+    watchdog: 1s
+    default_quick_debounce_open: 2ms
+    default_quick_debounce_close: 2ms
+    default_normal_debounce_open: 4ms
+    default_normal_debounce_close: 4ms
+  exp:
+    boards:
+      neuron:
+        model: FP-EXP-2000
+      "0071":
+        model: FP-EXP-0071

@@ -1,0 +1,106 @@
+#config_version=6
+# ------------------------------------------------------------------
+# I/O board — FP-I/O-3208 — 32 switches / 8 drivers.
+# Every switch/coil wired to this specific board lives in this file —
+# one file per physical board, instead of one giant machine-wide
+# switches.yaml/coils.yaml — so working on this board's wiring means
+# opening just this file. Just like the machine-wide files this
+# replaces, EVERY entry below ships commented out — uncomment (delete
+# the leading "# ") each device you actually built here, and double
+# check the "number:" line matches the port you wired it to.
+# ------------------------------------------------------------------
+switches:
+  # ---- Standard pinball devices — uncomment the ones your machine actually has ----
+  # s_left_flipper_eos:
+  #   number: 3208-0
+  # s_right_flipper_eos:
+  #   number: 3208-1
+  # s_tilt:
+  #   number: 3208-2
+  #   tags: tilt_warning
+  # s_shooter_lane:
+  #   number: 3208-3
+  # s_trough_1:
+  #   number: 3208-4
+  # s_trough_2:
+  #   number: 3208-5
+  # s_trough_3:
+  #   number: 3208-6
+  # s_trough_4:
+  #   number: 3208-7
+  # s_trough_5:
+  #   number: 3208-8
+  # s_trough_6:
+  #   number: 3208-9
+  # s_trough_jam:
+  #   number: 3208-10
+  # s_left_sling:
+  #   number: 3208-11
+  # s_right_sling:
+  #   number: 3208-12
+  # s_left_inlane:
+  #   number: 3208-13
+  # s_right_inlane:
+  #   number: 3208-14
+  # s_left_outlane:
+  #   number: 3208-15
+  # s_right_outlane:
+  #   number: 3208-16
+  # ---- Unused switches on 3208 (15 free) — uncomment & rename to use ----
+  # s_3208_17:
+  #   number: 3208-17
+  # s_3208_18:
+  #   number: 3208-18
+  # s_3208_19:
+  #   number: 3208-19
+  # s_3208_20:
+  #   number: 3208-20
+  # s_3208_21:
+  #   number: 3208-21
+  # s_3208_22:
+  #   number: 3208-22
+  # s_3208_23:
+  #   number: 3208-23
+  # s_3208_24:
+  #   number: 3208-24
+  # s_3208_25:
+  #   number: 3208-25
+  # s_3208_26:
+  #   number: 3208-26
+  # s_3208_27:
+  #   number: 3208-27
+  # s_3208_28:
+  #   number: 3208-28
+  # s_3208_29:
+  #   number: 3208-29
+  # s_3208_30:
+  #   number: 3208-30
+  # s_3208_31:
+  #   number: 3208-31
+
+coils:
+  # ---- Standard pinball devices — uncomment the ones your machine actually has ----
+  # c_left_flipper_main:
+  #   number: 3208-0
+  #   default_pulse_ms: 10
+  # c_left_flipper_hold:
+  #   number: 3208-1
+  #   allow_enable: true
+  # c_right_flipper_main:
+  #   number: 3208-2
+  #   default_pulse_ms: 10
+  # c_right_flipper_hold:
+  #   number: 3208-3
+  #   allow_enable: true
+  # c_trough_eject:
+  #   number: 3208-4
+  #   default_pulse_ms: 20
+  # c_auto_plunger:
+  #   number: 3208-5
+  #   default_pulse_ms: 25
+  # c_left_sling:
+  #   number: 3208-6
+  #   default_pulse_ms: 25
+  # c_right_sling:
+  #   number: 3208-7
+  #   default_pulse_ms: 25

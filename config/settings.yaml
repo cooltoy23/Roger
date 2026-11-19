@@ -1,0 +1,53 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Settings — operator-adjustable values, shown in MPF's own service
+# menu once the s_service_* switches in a board file are uncommented
+# and "service" is enabled in modes.yaml. Anywhere else in this folder
+# you see `settings.<name>`, MPF substitutes whatever the operator has
+# chosen for that setting live, instead of a value baked into the YAML.
+# ------------------------------------------------------------------
+settings:
+  balls_per_game:
+    settingType: game
+    sort: 1
+    label: Balls per game
+    key_type: int
+    default: 3
+    values:
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+      5: '5'
+  max_players:
+    settingType: game
+    sort: 2
+    label: Max players
+    key_type: int
+    default: 4
+    values:
+      1: '1'
+      2: '2'
+      3: '3'
+      4: '4'
+  ball_search_enabled:
+    settingType: game
+    sort: 3
+    label: Ball search enabled
+    key_type: int
+    default: 1
+    values:
+      0: "Disabled"
+      1: "Enabled"
+  warnings_to_tilt:
+    settingType: game
+    sort: 4
+    label: "Tilt on warning number:"
+    key_type: int
+    default: 3
+    values:
+      0: "Tilt disabled"
+      1: '1'
+      2: '2'
+      3: '3'
+      5: '5'

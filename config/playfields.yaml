@@ -1,0 +1,14 @@
+#config_version=6
+# ------------------------------------------------------------------
+# Playfield — default_source_device is the ball_device new balls
+# come from when a ball starts. Ball search is a real safety feature,
+# not a nice-to-have: without it, a ball stuck on a ramp or behind a
+# target just sits there forever instead of MPF nudging the playfield
+# (firing enabled coils in sequence) to try to free it.
+# ------------------------------------------------------------------
+playfields:
+  playfield:
+    tags: default
+    enable_ball_search: settings.ball_search_enabled
+    ball_search_timeout: 12s
+    default_source_device: bd_plunger
