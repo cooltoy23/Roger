@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cue7igcfe4sv3"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_bfrh1"]
+[ext_resource type="VideoStream" uid="uid://c1ttulu3vki40" path="res://mainuiloop.ogv" id="2_swkdf"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_lty5b"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="4_lty5b"]
+
+[node name="Base" type="Control" unique_id=670975104]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_bfrh1")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1884877311]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_swkdf")
+autoplay = true
+loop = true
+script = ExtResource("3_lty5b")
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="player_score" type="Label" parent="MPFVideoPlayer" unique_id=1830868668]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 10
+theme_override_font_sizes/font_size = 60
+text = "123456"
+script = ExtResource("4_lty5b")
+variable_name = "Score"
+min_digits = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
